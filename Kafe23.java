@@ -1,7 +1,8 @@
+
 import java.util.Scanner;
 
 public class Kafe23 {
-    
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
@@ -32,12 +33,17 @@ public class Kafe23 {
 
         double totalHarga = (jmlKopi + hargaKopi) + (jmlTeh + hargaTeh) + (jmlRoti + hargaRoti);
         double nominalBayar = totalHarga - (diskon * totalHarga);
+        int nominalInt = (int) nominalBayar;
+        byte totalByte = (byte) totalHarga;
 
         System.out.println("");
         System.out.println("========================================");
         System.out.println("Keanggotaan pelanggan " + keanggotaan);
         System.out.println("Item Pembelian " + jmlKopi + " kopi, " + jmlTeh + " teh, " + jmlRoti + " roti");
-        System.out.println("Nominal bayar Rp " + nominalBayar);
+        System.out.println("Nominal bayar (double) Rp " + nominalBayar);
+        System.out.println("Nominal Bayar (int) Rp : " + nominalInt);
+        System.out.println("Total Harga (double): " + totalHarga);
+        System.out.println("Total Harga (byte): " + totalByte);
         System.out.println("========================================");
 
     }
