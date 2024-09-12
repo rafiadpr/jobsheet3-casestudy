@@ -8,7 +8,7 @@ public class TagihanListrik23 {
 
         String namaPelanggan;
         double tarif = 1500.0;
-        int penggunaan_listrik;
+        int penggunaan;
 
         System.out.println("========================================");
         System.out.println("Aplikasi Tagihan Listrik");
@@ -20,20 +20,16 @@ public class TagihanListrik23 {
         namaPelanggan = input.nextLine();
 
         System.out.print("Masukkan penggunaan listrik : ");
-        penggunaan_listrik = input.nextInt();
+        penggunaan = input.nextInt();
 
-        double totalHarga = penggunaan_listrik * tarif;
+        double totalHarga = penggunaan * tarif;
 
         System.out.println("");
         System.out.println("========================================");
         System.out.println("Nama pelanggan : " + namaPelanggan);
         System.out.println("Total Tagihan : " + totalHarga);
-        
-        if (penggunaan_listrik > 500) {
-            System.out.println("Penggunaan listrik anda melebihi 500 kWh");
-        }
-        else {
-            System.out.println("Penggunaan listrik anda tidak melebihi 500 kWh");
-        }
+
+        boolean check = penggunaan > 500;
+        System.out.println("Apakah penggunaan listrik anda melebihi 500 kWh? " + check);
     }
 }
